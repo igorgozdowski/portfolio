@@ -1,215 +1,203 @@
+/* =========================
+   Igor Gozdowski – IT Portfolio
+   Clean / Professional Style
+   ========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400;600&display=swap');
+
+/* ---------- Variables ---------- */
+
+:root {
+    --bg-main: #0f172a;
+    --bg-card: #111827;
+    --border: #1f2937;
+
+    --text-main: #e5e7eb;
+    --text-muted: #9ca3af;
+
+    --accent: #3b82f6; /* calm IT blue */
+}
+
+/* ---------- Reset ---------- */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --primary-color: #2563eb;
-    --secondary-color: #3b82f6;
-    --accent-color: #60a5fa;
-    --bg-dark: #0f172a;
-    --bg-card: #1e293b;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-}
+/* ---------- Base ---------- */
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
-    background: var(--bg-dark);
-    color: var(--text-primary);
-    line-height: 1.6;
-    overflow-x: hidden;
-    position: relative;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg-main);
+    color: var(--text-main);
+    line-height: 1.7;
 }
 
-
+/* ---------- Header ---------- */
 
 header {
-    position: relative;
+    padding: 4rem 2rem;
     text-align: center;
-    padding: 80px 20px 60px;
-    background: var(--bg-card);
-    border-bottom: 3px solid var(--primary-color);
-    margin-bottom: 40px;
-    z-index: 1;
+    border-bottom: 1px solid var(--border);
 }
 
-h1 {
-    font-size: 3.5rem;
-    color: var(--text-primary);
-    margin-bottom: 10px;
-    font-weight: 700;
-    letter-spacing: -1px;
+header h1 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 2.6rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 header p {
-    font-size: 1.3rem;
-    color: var(--primary-color);
-    letter-spacing: 1px;
-    font-weight: 500;
-}
-
-section {
-    position: relative;
-    max-width: 1000px;
-    margin: 30px auto;
-    padding: 40px;
-    background: var(--bg-card);
-    border-radius: 8px;
-    border-left: 4px solid var(--primary-color);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    transition: all 0.3s ease;
-    z-index: 1;
-}
-
-section:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
-}
-
-h2 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 20px;
-    font-weight: 600;
-    border-bottom: 2px solid var(--primary-color);
-    padding-bottom: 10px;
-}
-
-h3 {
-    font-size: 1.5rem;
-    color: var(--text-primary);
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-
-p {
-    margin-bottom: 15px;
-    color: var(--text-secondary);
-    line-height: 1.8;
-}
-
-ul {
-    list-style: none;
-    padding-left: 0;
-}
-
-.certifications ul li,
-.projects ul li {
-    padding: 12px 15px;
-    margin: 8px 0;
-    background: rgba(37, 99, 235, 0.1);
-    border-left: 3px solid var(--primary-color);
-    border-radius: 4px;
-    transition: all 0.2s ease;
-}
-
-.certifications ul li:hover,
-.projects ul li:hover {
-    background: rgba(37, 99, 235, 0.2);
-    transform: translateX(5px);
-}
-
-.project {
-    margin: 30px 0;
-    padding: 25px;
-    background: rgba(30, 41, 59, 0.5);
-    border-radius: 6px;
-    border: 1px solid rgba(37, 99, 235, 0.3);
-    transition: all 0.2s ease;
-}
-
-.project:hover {
-    background: rgba(30, 41, 59, 0.8);
-    border-color: var(--primary-color);
-}
-
-.skills-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 15px;
-}
-
-.skills-list li {
-    padding: 15px 20px;
-    background: rgba(37, 99, 235, 0.1);
-    border: 2px solid var(--primary-color);
-    border-radius: 6px;
-    text-align: center;
-    font-weight: 500;
-    transition: all 0.2s ease;
-}
-
-.skills-list li:hover {
-    background: rgba(37, 99, 235, 0.2);
-    transform: translateY(-2px);
-    border-color: var(--accent-color);
-}
-
-.contact a {
-    color: var(--primary-color);
-    text-decoration: none;
-    transition: all 0.2s ease;
-    border-bottom: 2px solid transparent;
-}
-
-.contact a:hover {
-    color: var(--accent-color);
-    border-bottom-color: var(--accent-color);
-}
-
-.contact p {
-    margin: 15px 0;
+    color: var(--text-muted);
     font-size: 1.1rem;
 }
 
-/* Scrollbar styling */
-::-webkit-scrollbar {
-    width: 10px;
+/* ---------- Sections ---------- */
+
+section {
+    max-width: 1000px;
+    margin: 3rem auto;
+    padding: 0 2rem;
 }
 
-::-webkit-scrollbar-track {
-    background: var(--bg-dark);
+section h2 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+    color: var(--accent);
 }
 
-::-webkit-scrollbar-thumb {
-    background: var(--primary-color);
-    border-radius: 5px;
+section h2::before {
+    content: "# ";
+    color: var(--text-muted);
 }
 
-::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-color);
+/* ---------- Cards ---------- */
+
+.about,
+.certifications ul,
+.project,
+.skills-list,
+.contact {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
 }
 
-/* Responsive design */
+/* ---------- About ---------- */
+
+.about {
+    padding: 2rem;
+}
+
+.about p {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+}
+
+/* ---------- Certifications ---------- */
+
+.certifications ul {
+    list-style: none;
+    padding: 1.5rem;
+}
+
+.certifications li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.certifications li:last-child {
+    border-bottom: none;
+}
+
+/* ---------- Projects ---------- */
+
+.project {
+    padding: 2rem;
+}
+
+.project h3 {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+}
+
+.project p {
+    color: var(--text-muted);
+    margin-bottom: 1rem;
+}
+
+.project ul {
+    list-style: none;
+}
+
+.project ul li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.project ul li::before {
+    content: "–";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+}
+
+/* ---------- Skills ---------- */
+
+.skills-list {
+    list-style: none;
+    padding: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 0.75rem;
+}
+
+.skills-list li {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    padding: 0.5rem 0;
+}
+
+/* ---------- Contact ---------- */
+
+.contact {
+    padding: 2rem;
+}
+
+.contact p {
+    font-family: 'JetBrains Mono', monospace;
+    margin-bottom: 0.75rem;
+}
+
+.contact a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- Responsive ---------- */
+
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2.5rem;
+    header h1 {
+        font-size: 2rem;
     }
-    
-    header p {
-        font-size: 1rem;
-        white-space: normal;
-        width: auto;
-        border-right: none;
-    }
-    
-    section {
-        margin: 20px;
-        padding: 25px;
-    }
-    
-    .skills-list {
-        grid-template-columns: 1fr;
-    }
-}
 
-/* Terminal cursor effect */
-@keyframes terminal-cursor {
-    0%, 100% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
+    section {
+        padding: 0 1.5rem;
     }
 }
